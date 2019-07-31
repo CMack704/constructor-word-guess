@@ -16,6 +16,13 @@ function Word(word) {
             Letter.isGuessed(this.letters[j]);
         }
     }
+    this.displayWord = function() {
+        var randomWord = '';
+        for (var k = 0; k < this.letters.length; k++) {
+            randomWord += Letter.letterDisplay(this.letters[k] + '');
+        }
+        console.log(randomWord);
+    }
 }
 
 module.exports = Word;
